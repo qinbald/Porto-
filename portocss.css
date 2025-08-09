@@ -1,0 +1,424 @@
+:root {
+    --primary: rgba(77, 80, 73, 0.455);
+    --bg: #1c1c1c67;
+    --light-glass: #ffffff35;
+    --shadow-soft: rgba(0, 0, 0, 0.3);
+    --shadow-inset: inset rgba(0, 0, 0, 0.378);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+
+html{ 
+    scroll-behavior: smooth;
+    transition: 0.3s ease; 
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+    min-height: 300vh;
+}
+
+section {
+    min-height: 100vh;
+    padding: 3rem;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(243, 243, 243, 0.57);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.378);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 99999;
+}
+
+.navbar .navbar-logo {
+    font-size: 1.5rem;
+    color: var(--bg);
+    font-style: italic;
+    display: inline-flex;
+    background-color: rgba(0, 0, 0, 0.08);
+    border-radius: 13px;
+    box-shadow: 0 2px 6px var(--shadow-inset);
+    transition: 400ms ease-in-out;
+}
+
+.navbar .navbar-logo span {
+    color: #ffffffb7;
+    background-color: var(--primary);
+    border-radius: 0 13px 13px 0;
+    box-shadow: 0 2px 6px var(--shadow-inset);
+}
+
+.navbar .navbar-logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.5px 8px var(--shadow-inset);
+}
+
+.navbar .navbar-logo:hover::after { 
+    content: "-124140130"; 
+}
+
+.navbar .navbar-navigasi a {
+    font-weight: 500;
+    color: #00000098;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+    transition: 0.3s ease-in-out;
+    background-color: #ffffff35;
+    border-radius: 9px;
+    box-shadow: 0 2px 15px var(--shadow-soft);
+}
+
+.navbar .navbar-navigasi a:hover {
+    font-size: 1rem;
+    color: var(--primary);
+    transition: 0.3s linear;
+}
+
+.navbar .navbar-tambahan a {
+    color: #000;
+    margin: 0 0.5rem;
+    display: inline-block;
+    width: 30px;
+    transition: transform 0.3s ease;
+}
+
+.navbar .navbar-tambahan a:hover {
+    transform: scale(1.2);
+    color: var(--primary);
+}
+
+#menu { display: none; }
+
+/* Beranda */
+.mulai .greet h1,
+.mulai .greet h2 {
+    position: absolute;
+    background-color: var(--light-glass);
+    border-radius: 8px;
+    box-shadow: 0 5px 20px var(--shadow-soft);
+}
+
+.mulai .greet h1 {
+    font-size: 1.8rem;
+    top: 14rem; left: 12rem;
+}
+
+.mulai .greet h2 {
+    font-weight: 700;
+    font-size: 2.1rem;
+    top: 18rem; left: 12rem;
+}
+
+.mulai .greet h2 span {
+    color: #000000b5;
+    font-size: 2.5rem;
+    text-shadow: 0px 2px 8px #ffffff41;
+}
+
+.p1, .p2 {
+    position: absolute;
+    font-weight: 700;
+    background-color: var(--light-glass);
+    border-radius: 4px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.374);
+}
+.p1 { left: 14rem; top: 23.5rem; }
+.p2 { left: 24.6rem; top: 23.5rem; }
+.p3 { position: absolute; top: 27rem; width: 35rem; left: 14rem; }
+
+/* Gambar profil */
+.gambarProfil {
+    background-color: #1c1c1c2e;
+    width: 18rem; height: 27rem;
+    overflow: hidden;
+    border-radius: 20px;
+    position: absolute;
+    right: 12rem; top: 11rem;
+    box-shadow: 0 20px 24px rgba(0, 0, 0, 0.678);
+    padding: 10px;
+    transition: 0.4s ease;
+}
+.gambarProfil:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 18px inset rgba(20, 63, 78, 0.482);
+    filter: brightness(1.1);
+}
+
+/* Tombol mulai */
+.lainnya {
+    font-weight: 500;
+    color: #fff;
+    background-color: rgba(255, 252, 252, 0.35);
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 1px 6px inset rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 34rem; left: 12rem;
+    transition: 0.3s ease;
+}
+.lainnya:hover {
+    background-color: rgba(255, 255, 255, 0.48);
+    transform: scale(1.15);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* About */
+.about {
+    padding: 7rem 7% 1rem;
+    text-align: center;
+}
+
+.about h3 {
+    color: #000;
+    font-size: 2rem;
+    background-color: var(--light-glass);
+    display: inline-block;
+    border-radius: 8px;
+    box-shadow: 0 0px 10px inset rgba(0, 0, 0, 0.4);
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.about .content{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 2rem;
+}
+
+.about .pendidikan{
+    background-color: var(--primary);
+    width: 18rem;
+    height: 8rem;
+    border-radius: 8px;
+}
+
+.about .pendidikan h4{
+    color: #000;
+    background-color: #ffffff35;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.about .pendidikan ol{
+    display: inline-block;
+    padding: 0.4rem;
+    justify-content: center;
+    text-align: left;
+}
+
+.about .hardskills{
+    background-color: var(--primary);
+    border-radius: 8px;
+    width: 20rem;
+    height: 17rem;
+}
+
+.about .hardskills h5{
+    color: #000;
+    background-color: #ffffff35;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.hardskills .skill {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 90%;
+  margin: 1rem auto 1rem; 
+}
+
+.hardskills .skill p {
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.progress {
+  width: 100%;
+  height: 15px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: limegreen;
+  transition: width 0.5s ease;
+}
+
+.about .softskills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    width: 40rem;
+    border-radius: 8px;
+    padding-bottom: 1.5rem;
+}
+
+.softskills h6{
+    color: #000;
+    font-size: 1.3rem;
+    background-color: #ffffff35;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+.softskills table {
+    border-collapse: collapse;
+    width: 90%;
+    background-color: var(--primary);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.softskills th,
+.softskills td {
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.softskills th {
+  background-color: rgba(255,255,255,0.2);
+  font-weight: bold;
+}
+
+/* kontak */
+
+.kontak{
+    padding: 7rem 7% 1rem;
+    text-align: center;
+}
+
+.kontak h2{
+    color: #000;
+    font-size: 2rem;
+    background-color: var(--light-glass);
+    display: inline-block;
+    border-radius: 8px;
+    box-shadow: 0 0px 10px inset rgba(0, 0, 0, 0.4);
+    margin-bottom: 2rem;
+}
+
+.kontak .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.kontak .ikon{
+    background-color: #ffffff35;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+    gap: 3rem;
+}
+
+.map{
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    padding-bottom: 0;
+}
+
+.nohp{
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem; padding-top: 0;
+}
+
+.kontak .input{
+    background-color: var(--primary);
+    width: 20rem;
+    height: 20rem;
+    border-radius: 8px;
+}
+
+.kontak .input h3{
+    color: #fff;
+    font-weight: 500;
+    background-color: #ffffff35;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    
+}
+
+.input .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30rem;
+    gap: 1.3rem;
+    margin-top: 2rem;
+}
+
+.info button{
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    html { font-size: 62.5%; }
+    #menu { display: inline-block; }
+    .navbar .navbar-navigasi {
+        position: absolute;
+        top: 100%; right: -100%;
+        background-color: #fff;
+        width: 20rem; height: 22vh;
+        transition: 350ms;
+        border-radius: 8px;
+    }
+    .navbar .navbar-navigasi.active { right: 65px; }
+    .navbar .navbar-navigasi a {
+        color: var(--bg);
+        display: block;
+        margin: 1.5rem; padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 450px) {
+    html { 
+        font-size: 55%; 
+    }
+}
